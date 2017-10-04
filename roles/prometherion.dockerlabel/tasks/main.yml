@@ -7,3 +7,6 @@
             dest=/etc/docker/daemon.json
             owner=root
             group=root
+- name: Restart Docker Engine in order to apply labelling
+  service: name=docker
+           state=restarted
